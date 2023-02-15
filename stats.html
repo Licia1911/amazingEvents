@@ -5,47 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Stats</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./assets/Logo Amazing Events2.png">
+    <link rel="shortcut icon" href="./assets/Logo_Amazing_Events2.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/Logo Amazing Events.png" alt="Logo" width="100"
-                        class="d-inline-block align-text-center" id="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="d-flex justify-content-end">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link" href="./index.html">Home</a>
-                            <a class="nav-link" href="./event.html">Upcoming Events</a>
-                            <a class="nav-link" href="./past_events.html">Past Events</a>
-                            <a class="nav-link" href="./contact.html">Contact</a>
-                            <a class="nav-link active" aria-current="page" href="./stats.html">Stats</a>
+    <div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/Logo_Amazing_Events.png" alt="Logo" width="100"
+                            class="d-inline-block align-text-center" id="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-flex justify-content-end">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link px-3" href="./index.html">Home</a>
+                                <a class="nav-link px-3" href="./upcoming.html">Upcoming Events</a>
+                                <a class="nav-link px-3" href="./past_events.html">Past Events</a>
+                                <a class="nav-link px-3" href="./contact.html">Contact</a>
+                                <a class="nav-link px-3 active" aria-current="page" href="./stats.html">Stats</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="title_container">
-        <div class="row">
-            <div class="text-center" id="title">
+            </nav>
+        </header>
+        <div class="title_container">
+            <div class="title">
+                <a href="./contact.html"><i class="bi bi-chevron-left" style="font-size: 2rem; color: black;"></i></a>
                 <h1>Stats</h1>
+                <a href="./index.html"><i class="bi bi-chevron-right" style="font-size: 2rem; color: black;"></i></a>
             </div>
         </div>
-
+    </div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="row" colspan="3"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="footer">
+        <div class="redes mx-4">
+            <a href="#"><i class="bi bi-instagram" style="font-size: 2rem; color: black;"></i></a>
+            <a href="#"><i class="bi bi-facebook" style="font-size: 2rem; color: black;"></i></a>
+            <a href="#"><i class="bi bi-whatsapp" style="font-size: 2rem; color: black;"></i></a>
+        </div>
+        <div class="text mx-4">
+            <h2>Cohort</h2>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
