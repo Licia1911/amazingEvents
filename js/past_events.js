@@ -13,40 +13,62 @@ card.innerHTML = htmlEvents;
 
 
 let checkbox = document.getElementById("checkbox");
-let HTMLhome = "";
+let htmlHome = "";
 let cardsearch = [];
+
 for (let category of categories) {
-    HTMLhome += crearCheckbox(category);
+    htmlHome += crearCheckbox(category);
 }
 
-checkbox.innerHTML = HTMLhome;
+checkbox.innerHTML = htmlHome;
 
 let itemsCheckboxes = document.querySelectorAll(".form-check-input");
-console.log(itemsCheckboxes);
 
 itemsCheckboxes.forEach(checkbox => checkbox.onchange = () => {
-    let HTMLresultados = "";
-    let categories = [];
+    let htmlResultados = "";
+    let checkcategories = [];
+
     itemsCheckboxes.forEach(checkbox => {
         if (checkbox.checked) {
-            categories.push(checkbox.value);
+            checkcategories.push(checkbox.value);
 
         }
 
     });
 
-    console.log(categories);
-
-    if (categories.length > 0) {
-        data.events.filter(event => categories.includes(event.category)).forEach(event => { HTMLresultados += createCard(event) });
-
-        console.log(HTMLresultados);
-
-
+    if (checkcategories.length > 0) {
+        data.events.filter(event => checkcategories.includes(event.category)).forEach(events => {
+            htmlResultados += createCard(events)
+        });
     } else {
-        data.events.forEach(event => { HTMLresultados += createCard(event) });
+        data.events.forEach(events => {
+            htmlResultados += createCard(events)
+        });
     }
-
-    document.querySelector('div.events').innerHTML = HTMLresultados;
-
+    card.innerHTML = htmlResultados;
 });
+
+let inputSearch = document.getElementById("search");
+let botonBusqueda = document.getElementById("form-busqueda");
+botonBusqueda.onsubmit = (e) => {
+    e.preventDefault();
+    let htmlResultadoTexto = "";
+    let textoIngresado = inputSearch.value.toLowerCase().trim();
+    let resultadosBusqueda = [];
+
+
+    for (let event of data.events) {
+        if (event.name.toLowerCase().includes(textoIngresado)
+            || event.description.toLowerCase().includes(textoIngresado)) {
+            htmlResultadoTexto += createCard(event);
+            resultadosBusqueda.push(event)
+
+        }
+    }
+    if (resultadosBusqueda.length == 0) {
+        htmlResultadoTexto += `<h4 class="text-muted">Búsqueda no encontrada</h4>`
+
+    }
+    console.log(resultadosBusqueda)
+    card.innerHTML = htmlResultadoTexto;
+}
