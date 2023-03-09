@@ -174,15 +174,15 @@ let data = {
 
 function createCard(event) {
     let card = `
-    <div class="col col-xs-12 col-md-6 col-xl-3">
-    <div class="card text-white bg-dark mb-3 h-80">
+    <div class="col col-xs-12 col-md-6 col-xl-3 mb-3">
+    <div class="card text-white bg-dark h-100">
         <img src="${event.image}" class="card_img card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">${event.name}</h5>
             <p class="card-text">${event.description}</p>
             <div class="card_footer">
                 <span>Price: $ ${event.price}</span>
-                <a href="#" class="btn btn-dark">Ver mas</a>
+                <a href="./event.html?id=${event._id}" class="btn btn-dark">Ver mas</a>
             </div>
         </div>
     </div>
@@ -190,3 +190,19 @@ function createCard(event) {
     `
     return card;
 };
+
+
+let categories = [];
+data.events.forEach(evento => {
+    if (!categories.includes(evento.category)) {
+        categories.push(evento.category)
+    }
+});
+
+function crearCheckbox(category) {
+    return `<div class="form-check form-check-inline">
+    <input class="form-check-input flexCheck" type="checkbox" id="checkbox${category}" value="${category}" name="category">
+    <label class="form-check-label" for="checkbox${category}">${category}</label>
+    </div>`;
+}
+

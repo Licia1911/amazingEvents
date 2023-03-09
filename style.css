@@ -30,7 +30,7 @@
 .check_container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; 
+    gap: 10px; 
 }
 
 
@@ -68,7 +68,7 @@
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    gap: 15px; 
+    gap: 10px; 
     align-items: center;
     background-color:  rgb(242, 28, 120);
 }
@@ -90,27 +90,6 @@ tr, th, td {
     color: rgb(242, 28, 120);
 }
 
-.container_event {
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    margin-top: 150px;
-}
-
-.card_cont {
-    border: 5px solid rgb(242, 28, 120) !important;
-}
-
-.concert_img {
-    width: 1040px;
-    padding: 30px !important;
-    box-shadow: -2px -2px 2px rgb(101, 101, 101);
-    
-}
-
-.card-body {
-    padding: 30px !important;
-}
 
 
 
