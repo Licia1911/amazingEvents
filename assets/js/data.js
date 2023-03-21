@@ -1,3 +1,19 @@
+let dataAmazing = [];
+
+async function getData(){
+    await fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    .then(respuesta => respuesta.json())
+    .then(json => data = json)
+    localStorage.setItem("data", JSON.stringify(data))
+};
+
+getData();
+
+let data = localStorage.getItem("data");
+data = JSON.parse(data);
+console.log(data);
+
+/*
 let data = {
     "currentDate": "2022-01-01",
     "events": [
@@ -171,10 +187,11 @@ let data = {
         }
     ]
 };
+*/
 
 function createCard(event) {
     let card = `
-    <div class="col col-xs-12 col-md-6 col-xl-3 mb-3">
+    <div class="col-xs-12 col-md-4 col-xl-3 mb-3">
     <div class="card text-white bg-dark h-100">
         <img src="${event.image}" class="card_img card-img-top" alt="...">
         <div class="card-body">
